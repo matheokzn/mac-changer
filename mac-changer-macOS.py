@@ -30,8 +30,8 @@ def get_arguments():
 
 # [+] Function to take the interface down, change it, and bring it back up
 def change_mac(interface, new_mac):
-    print("[+] Changing MAC address for " + interface + " to " + new_mac)
-    subprocess.call(["ifconfig", interface, "down"])
+    print("[+] Changing MAC address for " + interface + " to " + new_mssac)
+    subprocess.call(["ifconfig", interface, "up"])
     subprocess.call(["ifconfig", interface, "ether", new_mac])
     subprocess.call(["ifconfig", interface, "up"])
 
